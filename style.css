@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #252529;
+    color: white;
+    line-height: 1.5;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.menu-btn div{
+    width: 40px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    visibility: hidden;
+}
+
+li,a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    height: 45px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+   
+}
+
+.navbar{
+    padding-bottom: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar .nav-list{
+    display: flex;
+}
+
+.navbar .nav-list li{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 25px;
+    transition: all 0.5ms ease-in;
+}
+
+.navbar .nav-list .hidden-li.show{
+    visibility: visible;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: url(img/showcase.jpg) no-repeat;
+}
+.main-container p{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.music-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.music-container p{
+     padding-left: 100px;
+     padding-right: 100px;
+}
+.music-container img{
+    height: 65vh;
+    width: 70%; 
+}  
+.lead{
+    font-size: 2em;
+    margin-bottom: 0%;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    color: #333;
+}
+.video-container p{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.video-container img{
+    height: 65vh;
+    width: 70%; 
+}
+.lead{
+    font-size: 2em;
+    margin-bottom: 0%;
+}
+
+
+.entertainment-container{
+    height: 60vh;
+    background: url(img/section-bg.jpg) repeat bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.gift-card-container{
+    height: 60vh;
+    display: grid;
+    padding-right: 5em;
+    grid-template-columns: repeat(2, 1fr);
+    background: white;
+    color: #333;
+}
+
+.gift-card-img img{
+    height: 50vh;
+    width: 60%;
+}
+.gift-card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gift-card-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: left;
+}
+
+
+#main-footer{
+    height: 40vh;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+}
+
+.footer-header{
+    border-bottom: 1px solid rgb(107, 104, 104);
+}
+
+#footer-bottom{
+    background: #333;
+    height: 45px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 750px){
+
+    .navbar{
+        height: 35vh;
+        background: #333;
+        transition: all 0.1s ease;
+    }
+    #main-heading{
+        font-size: 20px;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+    }
+
+    .menu-btn{
+        visibility: visible;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .navbar .nav-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        padding-left: 5px;
+    }
+
+    .navbar .nav-list li{
+        margin: 7px;
+    }
+
+    .navbar .nav-list .hidden-li{
+        visibility: hidden;
+        border-bottom: 2px solid rgb(80, 79, 79);
+    }
+
+    .h-resp{
+        height: 7vh;
+    }
+
+    .main-container h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .main-container h2{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .main-container p{
+        font-size: 25px;
+    }
+    .music-container img{
+        height: 50vh;
+    }
+    .video-container img{
+        height: 50vh;
+    }
+
+    .gift-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    .gift-card-container img{
+        height: 20vh;
+    }
+    .gift-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    #main-footer{
+        height: 50vh;
+        overflow: hidden;
+    }
+
+@media only screen and (max-width: 650px){
+
+    .h-resp{
+        height: 7vh;
+    }
+    .navbar .nav-list li{
+       margin: 7px;
+    }
+
+    .main-container h2{
+        font-size: 25px;
+    }
+    .main-container p{
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .music-container img{
+        height: 30vh;
+    }
+    .video-container img{
+        height: 30vh;
+    }
+    .music-container p{
+        font-size: 20px;
+        padding:0%;
+    }
+    .video-container p{
+        font-size: 20px;
+        padding:0%;
+    }
+    .entertainment-container{
+        height: 100vh;
+    }
+    .entertainment-container p{
+        font-size: 20px;
+    }
+    .gift-card-container{
+        height: 80vh;
+    }
+    .gift-card-content p{
+        font-size: 20px;
+    }
+    #main-footer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 410px){
+        .navbar{
+            height: 35vh;
+        }
+        .h-resp{
+            height: 7vh;
+        }
+        #main-heading{
+            font-size: 20px;
+            position: absolute;
+            top: 3px;
+            left: 5px;
+        }
+        .menu-btn{
+            visibility: visible;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .navbar .nav-list{
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            padding-left: 10px;
+        }
+        
+        .hidden-li a{
+            font-size: 15px;
+        }
+        .navbar .nav-list .hidden-li{
+            margin: 2px;
+        }
+        .main-container h1{
+            font-size: 20px;
+        }
+        .main-container h2{
+            font-size: 18px;
+        }
+        .main-container p{
+            font-size: 15px;
+            padding: 5px;
+        }
+        .music-container h3{
+            font-size: 20px;
+        }
+        .music-container p{
+            font-size: 12px;
+        }
+        .music-container .btn{
+            font-size: 12px;
+        }
+        .video-container h3{
+            font-size: 20px;
+        }
+        .video-container p{
+            font-size: 12px;
+        }
+        .video-container .btn{
+            font-size: 12px;
+        }
+        .entertainment-container h3{
+            font-size: 20px;
+        }
+        .entertainment-container p{
+            font-size: 12px;
+        }
+        .gift-card-container img{
+            height: 50px;
+        }
+        .gift-card-container p{
+            font-size: 12px
+        }
+}
+
+@media only screen and (min-width: 210px) and (max-width: 310px){
+    .navbar{
+        height: 35vh;
+    }
+    .h-resp{
+        height: 7vh;
+    }
+    #main-heading{
+        font-size: 20px;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+    }
+    .menu-btn{
+        visibility: visible;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    .navbar .nav-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        padding-left: 10px;
+    }
+    
+    .hidden-li a{
+        font-size: 15px;
+    }
+    .navbar .nav-list .hidden-li{
+        margin: 2px;
+    }
+    .main-container h1{
+        font-size: 20px;
+    }
+    .main-container h2{
+        font-size: 18px;
+    }
+    .main-container p{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .music-container h3{
+        font-size: 20px;
+    }
+    .music-container p{
+        font-size: 12px;
+    }
+    .music-container .btn{
+        font-size: 12px;
+    }
+    .video-container h3{
+        font-size: 20px;
+    }
+    .video-container p{
+        font-size: 12px;
+    }
+    .video-container .btn{
+        font-size: 12px;
+    }
+    .entertainment-container h3{
+        font-size: 20px;
+    }
+    .entertainment-container p{
+        font-size: 12px;
+    }
+    .gift-card-container img{
+        height: 50px;
+    }
+    .gift-card-container p{
+        font-size: 12px
+    }
+}
+
+@media only screen and (max-width: 210px){
+    body{
+        display: none;
+    }
+
+
+
+
+
