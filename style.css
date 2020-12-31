@@ -35,7 +35,7 @@ li,a{
 }
 
 nav{
-    height: 45px;
+    height: 48px;
     width: 100%;
     background-color: #333;
     color: white;
@@ -49,20 +49,45 @@ nav{
     left: 0;
 }
 
+#navbar-icon{
+    font-size: 25px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+#main-heading{
+    position: absolute;
+    top: 7px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .navbar .nav-list{
     display: flex;
+    position: absolute;
+    top: 10px;
+    left: 15px;
 }
 
 .navbar .nav-list li{
     font-size: 20px;
     font-weight: bold;
-    margin-right: 25px;
-    transition: all 0.5ms ease-in;
+    margin-left: 40px;
+    margin-right: 55px;
+}
+.navbar .nav-list .hidden-li a{
+    font-size: 20px;
+    font-weight: 400;
 }
 
-.navbar .nav-list .hidden-li.show{
-    visibility: visible;
+
+
+#search-bar{
+    visibility: hidden;
 }
+
 
 .main-container{
     display: flex;
@@ -73,9 +98,19 @@ nav{
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    background: url(img/showcase.jpg) no-repeat;
+    background: white;
+    color: #333;
+}
+.main-container h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.main-container h2{
+   font-size: 35px;
+   font-weight: bold;
 }
 .main-container p{
+    font-size: 30px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -182,53 +217,86 @@ nav{
     text-align: center;
 }
 
+@media only screen and (max-width: 980px){
+
+    .navbar .nav-list li{
+        margin-left: 25px;
+        margin-right: 45px;
+    }
+
+}
+@media only screen and (max-width: 850px){
+
+    .navbar .nav-list li{
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+
+}
+
 @media only screen and (max-width: 750px){
 
     .navbar{
-        height: 35vh;
+        height: 100%;
         background: #333;
-        transition: all 0.1s ease;
+        transition: all 0.2s ease-out;
+    }
+    #navbar-icon{
+        visibility: hidden;
     }
     #main-heading{
-        font-size: 20px;
+        font-size: 25px;
         position: absolute;
         top: 3px;
         left: 5px;
     }
-
     .menu-btn{
         visibility: visible;
         position: absolute;
         top: 5px;
         right: 5px;
     }
-
     .navbar .nav-list{
         display: flex;
         flex-direction: column;
-        margin-top: 25px;
-        padding-left: 5px;
+        position: absolute;
+        top: 100px;
+        left: 10px; 
     }
-
     .navbar .nav-list li{
-        margin: 7px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-
     .navbar .nav-list .hidden-li{
         visibility: hidden;
         border-bottom: 2px solid rgb(80, 79, 79);
     }
-
-    .h-resp{
-        height: 7vh;
+    .navbar .nav-list .hidden-li.show{
+        visibility: visible;
+    }
+    #search-bar.show{
+            visibility: visible;
+            background: white;
+            color: white;
+            height: 35px;
+            width: 90%;
+            border-radius: 7px;
+            position: fixed;
+            top: 55px;
+            left: 27px;
+    }
+    .navbar.h-resp{
+        height: 48px;
     }
 
     .main-container h1{
-        font-size: 50px;
+        font-size: 45px;
         font-weight: bold;
     }
     .main-container h2{
-        font-size: 30px;
+        font-size: 35px;
         font-weight: bold;
     }
     .main-container p{
@@ -259,7 +327,7 @@ nav{
     }
 
     #main-footer{
-        height: 50vh;
+        height: 40vh;
         overflow: hidden;
     }
 
@@ -268,10 +336,10 @@ nav{
     .h-resp{
         height: 7vh;
     }
-    .navbar .nav-list li{
-       margin: 7px;
-    }
 
+    .main-container h1{
+        font-size: 35px;
+    }
     .main-container h2{
         font-size: 25px;
     }
@@ -306,18 +374,39 @@ nav{
     .gift-card-content p{
         font-size: 20px;
     }
-    #main-footer{
+    #main-footer ul li{
         display: none;
+    }
+    #main-footer{
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7em;
+        padding: 0.5em;
+        grid-gap: 0em;
+    }
+    .footer-header{
+        visibility: visible;
     }
 }
 
 @media only screen and (max-width: 410px){
-        .navbar{
-            height: 35vh;
-        }
+        
         .h-resp{
             height: 7vh;
         }
+
+        #search-bar.show{
+            visibility: visible;
+            background: white;
+            color: white;
+            height: 35px;
+            width: 90%;
+            border-radius: 7px;
+            position: fixed;
+            top: 55px;
+            left: 20px;
+    }
         #main-heading{
             font-size: 20px;
             position: absolute;
@@ -330,27 +419,15 @@ nav{
             top: 5px;
             right: 5px;
         }
-        .navbar .nav-list{
-            display: flex;
-            flex-direction: column;
-            margin-top: 25px;
-            padding-left: 10px;
-        }
-        
-        .hidden-li a{
-            font-size: 15px;
-        }
-        .navbar .nav-list .hidden-li{
-            margin: 2px;
-        }
+      
         .main-container h1{
-            font-size: 20px;
+            font-size: 35px;
         }
         .main-container h2{
-            font-size: 18px;
+            font-size: 25px;
         }
         .main-container p{
-            font-size: 15px;
+            font-size: 20px;
             padding: 5px;
         }
         .music-container h3{
@@ -383,15 +460,27 @@ nav{
         .gift-card-container p{
             font-size: 12px
         }
+        #main-footer{
+            height: 40vh;
+        }
 }
 
 @media only screen and (min-width: 210px) and (max-width: 310px){
-    .navbar{
-        height: 35vh;
-    }
+    
     .h-resp{
         height: 7vh;
     }
+    #search-bar.show{
+        visibility: visible;
+        background: white;
+        color: white;
+        height: 35px;
+        width: 90%;
+        border-radius: 7px;
+        position: fixed;
+        top: 55px;
+        left: 12px;
+}
     #main-heading{
         font-size: 20px;
         position: absolute;
@@ -404,24 +493,12 @@ nav{
         top: 5px;
         right: 5px;
     }
-    .navbar .nav-list{
-        display: flex;
-        flex-direction: column;
-        margin-top: 25px;
-        padding-left: 10px;
-    }
-    
-    .hidden-li a{
-        font-size: 15px;
-    }
-    .navbar .nav-list .hidden-li{
-        margin: 2px;
-    }
+
     .main-container h1{
-        font-size: 20px;
+        font-size: 35px;
     }
     .main-container h2{
-        font-size: 18px;
+        font-size: 25px;
     }
     .main-container p{
         font-size: 15px;
@@ -457,6 +534,16 @@ nav{
     .gift-card-container p{
         font-size: 12px
     }
+    #main-footer h5{
+        font-size: 15px;
+    }
+    #main-footer{
+        height: 45vh;
+    }
+    #footer-bottom{
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 210px){
