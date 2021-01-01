@@ -4,6 +4,7 @@ const nav = document.querySelector('.navbar');
 
 btn.addEventListener('click', () =>{
     nav.classList.toggle('h-resp');
+    nav.classList.toggle('c-resp');
 });
 
 let menu = false;
