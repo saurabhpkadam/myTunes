@@ -184,26 +184,22 @@ nav{
 }
 
 #main-footer{
+    background-color: #333;
     height: 40vh;
-    padding: 2em;
+    padding-bottom: 2em;
+    padding-top: 2em;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1em;
 }
-
-.footer-header{
-    border-bottom: 1px solid rgb(107, 104, 104);
+#main-footer h5{
+    color: white;
+}
+#main-footer ul li{
+    color: white;
 }
 
 @media only screen and (max-width: 980px){
 
-    
-    .navbar .nav-list{
-        display: flex;
-        position: absolute;
-        top: 10px;
-        left: 50px;
-    }
     .navbar .nav-list li{
         margin-left: 25px;
         margin-right: 20px;
@@ -212,12 +208,6 @@ nav{
 }
 @media only screen and (max-width: 850px){
 
-    .navbar .nav-list{
-        display: flex;
-        position: absolute;
-        top: 10px;
-        left: 50px;
-    }
     .navbar .nav-list li{
         margin-left: 15px;
         margin-right: 15px;
@@ -272,15 +262,14 @@ nav{
     }
     #search-bar.show{
             visibility: visible;
-            background: rgb(78, 78, 78);
+            background: rgb(27, 27, 27);
             color: white;
-            font-weight: bold;
             height: 35px;
             width: 90%;
             border-radius: 7px;
             position: fixed;
             top: 55px;
-            left: 27px;
+            left: 30px;
     }
     .navbar.h-resp{
         height: 48px;
@@ -332,6 +321,15 @@ nav{
         background: black;
         transition: all 0.2s ease-out;
     }
+    #search-bar.show{
+        visibility: visible;
+        height: 35px;
+        width: 92%;
+        border-radius: 7px;
+        position: fixed;
+        top: 55px;
+        left: 20px;
+}
     .navbar.c-resp{
         background:#333;
     }
@@ -383,9 +381,6 @@ nav{
         height: 40vh;
         display: flex;
         flex-direction: column;
-        margin-top: 0.7em;
-        padding: 0.5em;
-        grid-gap: 0em;
     }
     .footer-header{
         visibility: visible;
@@ -413,7 +408,7 @@ nav{
             border-radius: 7px;
             position: fixed;
             top: 55px;
-            left: 20px;
+            left: 15px;
     }
         #main-heading{
             font-size: 20px;
@@ -480,7 +475,7 @@ nav{
     }
     #search-bar.show{
         visibility: visible;
-        background: white;
+        background: rgb(27, 27, 27);
         color: white;
         height: 35px;
         width: 90%;
