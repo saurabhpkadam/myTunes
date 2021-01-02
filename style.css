@@ -74,6 +74,10 @@ nav{
     font-size: 20px;
     font-weight: 400;
 }
+.navbar .nav-list li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
 
 #search-bar{
     visibility: hidden;
@@ -182,20 +186,19 @@ nav{
    justify-content: center;
    text-align: left;
 }
-
 #main-footer{
-    background-color: #333;
-    height: 40vh;
-    padding-bottom: 2em;
-    padding-top: 2em;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 30px;
 }
-#main-footer h5{
+#footer-bottom{
+    visibility: hidden;
+    text-align: center;
+    padding: 10px;
+    background: #333;
     color: white;
-}
-#main-footer ul li{
-    color: white;
+    width: 100%;
+    height: 40px;
 }
 
 @media only screen and (max-width: 980px){
@@ -204,7 +207,7 @@ nav{
         margin-left: 25px;
         margin-right: 20px;
     }
-
+    
 }
 @media only screen and (max-width: 850px){
 
@@ -255,18 +258,23 @@ nav{
     }
     .navbar .nav-list .hidden-li{
         visibility: hidden;
+        line-height: 40px;
+        padding-top: 10px;
         border-bottom: 2px solid rgb(80, 79, 79);
     }
     .navbar .nav-list .hidden-li.show{
         visibility: visible;
     }
+    
     #search-bar.show{
             visibility: visible;
             background: rgb(27, 27, 27);
             color: white;
             height: 35px;
+            padding-bottom: 15px;
             width: 90%;
             border-radius: 7px;
+            border: none;
             position: fixed;
             top: 55px;
             left: 30px;
@@ -310,10 +318,7 @@ nav{
         align-items: center;
     }
 
-    #main-footer{
-        height: 40vh;
-        overflow: hidden;
-    }
+}
 
 @media only screen and (max-width: 650px){
     .navbar{
@@ -372,19 +377,16 @@ nav{
         height: 80vh;
     }
     .gift-card-content p{
-        font-size: 20px;
-    }
-    #main-footer ul li{
-        display: none;
+        font-size: 16px;
     }
     #main-footer{
-        height: 40vh;
-        display: flex;
-        flex-direction: column;
+        display: none;
     }
-    .footer-header{
+    #footer-bottom{
         visibility: visible;
+        font-size: 12px;
     }
+    
 }
 
 @media only screen and (max-width: 410px){
@@ -461,10 +463,7 @@ nav{
             height: 50px;
         }
         .gift-card-container p{
-            font-size: 12px
-        }
-        #main-footer{
-            height: 40vh;
+            font-size: 13px
         }
 }
 
@@ -535,13 +534,11 @@ nav{
         height: 50px;
     }
     .gift-card-container p{
-        font-size: 12px
+        font-size: 13px
     }
-    #main-footer h5{
-        font-size: 15px;
-    }
-    #main-footer{
-        height: 45vh;
+    #footer-bottom{
+        height: 30px;
+        font-size: 8px;
     }
 
 }
