@@ -44,7 +44,7 @@ nav{
 
 .navbar{
     padding-bottom: 15px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -77,14 +77,6 @@ nav{
 .navbar .nav-list li:hover{
     cursor: pointer;
     transform: scale(1.2);
-}
-
-#search-bar{
-    visibility: hidden;
-    background: rgb(78, 78, 78);
-    color: white;
-    font-weight: bold;
-    width: 20px;
 }
 
 .main-container{
@@ -192,7 +184,7 @@ nav{
     padding: 30px;
 }
 #footer-bottom{
-    visibility: hidden;
+    overflow: hidden;
     text-align: center;
     padding: 10px;
     background: #333;
@@ -266,19 +258,6 @@ nav{
         visibility: visible;
     }
     
-    #search-bar.show{
-            visibility: visible;
-            background: rgb(27, 27, 27);
-            color: white;
-            height: 35px;
-            padding-bottom: 15px;
-            width: 90%;
-            border-radius: 7px;
-            border: none;
-            position: fixed;
-            top: 55px;
-            left: 30px;
-    }
     .navbar.h-resp{
         height: 48px;
     }
@@ -326,15 +305,6 @@ nav{
         background: black;
         transition: all 0.2s ease-out;
     }
-    #search-bar.show{
-        visibility: visible;
-        height: 35px;
-        width: 92%;
-        border-radius: 7px;
-        position: fixed;
-        top: 55px;
-        left: 20px;
-}
     .navbar.c-resp{
         background:#333;
     }
@@ -403,15 +373,6 @@ nav{
             height: 7vh;
         }
 
-        #search-bar.show{
-            visibility: visible;
-            height: 35px;
-            width: 90%;
-            border-radius: 7px;
-            position: fixed;
-            top: 55px;
-            left: 15px;
-    }
         #main-heading{
             font-size: 20px;
             position: absolute;
@@ -472,17 +433,7 @@ nav{
     .h-resp{
         height: 7vh;
     }
-    #search-bar.show{
-        visibility: visible;
-        background: rgb(27, 27, 27);
-        color: white;
-        height: 35px;
-        width: 90%;
-        border-radius: 7px;
-        position: fixed;
-        top: 55px;
-        left: 12px;
-}
+
     #main-heading{
         font-size: 20px;
         position: absolute;
@@ -543,10 +494,25 @@ nav{
 
 }
 
+@media only screen and (max-height: 380px){
+    .main-container p{
+        display: none;
+    }
+}
+@media only screen and (max-height: 280px){
+    .entertainment-container{
+        height: 100vh;
+    }
+    .gift-card-container{
+        height: 100vh;
+    }
+}
+
 @media only screen and (max-width: 210px){
     body{
         display: none;
     }
+
 
 
 
